@@ -9,12 +9,15 @@ class ExFileds extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(12),
+      alignment:  Alignment.center,
+      width: 170,
+      padding: const EdgeInsets.all(12),
    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(5),
+      borderRadius: BorderRadius.circular(12),
      color: eX.color
    ),
       child: Row(
+         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(eX.txt,style: Theme.of(context).textTheme.bodySmall,),
           SizedBox(width: 10,),

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodySmall: TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -23,14 +23,15 @@ class MyApp extends StatelessWidget {
           ),
           bodyLarge: TextStyle(
             color: Colors.black,
-            fontSize: 30,
+            fontSize: 25,
             fontWeight: FontWeight.bold
 
           )
         )
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routeName,
+      initialRoute:
+          Screen1.routeName,
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         Screen1.routeName: (context) => Screen1(),

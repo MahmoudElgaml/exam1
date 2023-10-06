@@ -11,16 +11,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: "."),
-        BottomNavigationBarItem(icon: Icon(Icons.home_filled),label:"." ),
-        BottomNavigationBarItem(icon: Icon(Icons.home_filled),label:"." ),
-        BottomNavigationBarItem(icon: Icon(Icons.home_filled),label:"." ),
-      ],
-      selectedItemColor: Colors.green,
-      unselectedItemColor: Colors.black,
-        type:BottomNavigationBarType.shifting ,
-       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "."),
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "."),
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "."),
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "."),
+        ],
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.black,
+        type: BottomNavigationBarType.shifting,
+      ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -115,32 +116,53 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index, realIndex) => Fileds(),
                 options: CarouselOptions(
                   enlargeCenterPage: true,
-                   autoPlay: true,
-
+                  autoPlay: true,
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ExFileds(ExModel("relxation", "assets/images/Group2.png",
-                      Color(0xFFf9f5ff))),
-                  ExFileds(ExModel(
-                      "Madition", "assets/images/Group3.png", Color(0xFFf9f5ff))),
+                  ExFileds(
+                    ExModel(
+                      "relaxation",
+                      "assets/images/Group2.png",
+                      Color(0xFFf9f5ff),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  ExFileds(
+                    ExModel(
+                      "Mediation",
+                      "assets/images/Group3.png",
+                      Color(0xFFfdf2fa),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ExFileds(ExModel("Breathing", "assets/images/Group4.png",
-                      Color(0xFFf0f9ff))),
-                  ExFileds(ExModel("relxation", "assets/images/Group5.png",
-                      Color(0xFFfffaf5))),
+                  ExFileds(
+                    ExModel(
+                      "Breathing",
+                      "assets/images/Group4.png",
+                      const Color(0xFFfffaf5),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  ExFileds(
+                    ExModel(
+                      "Yoga",
+                      "assets/images/Group5.png",
+                      Color(0xFFf0f9ff),
+                    ),
+                  ),
                 ],
               )
             ],
